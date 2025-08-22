@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Function Parameter
+	</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="first_num" id="first">
+		<input type="text" name="sec_num" id="sec">
+		<input type="submit" onclick="return a()">
+	</form>
+	<h1>
+		The Addition Is
+	</h1>
+	<p id="add"></p>
+
+	<h1>
+		The Substraction Is
+	</h1>
+	<p id="sub"></p>
+
+	<h1>
+		The Multiplication Is
+	</h1>
+	<p id="mul"></p>
+
+	<h1>
+		The Divide Is
+	</h1>
+	<p id="div"></p>
+
+	<script type="text/javascript">
+		function a()
+		{
+			var one = Number(document.getElementById("first").value);
+			var two = Number(document.getElementById("sec").value);
+			add(one,two);
+			sub(one,two);
+			mul(one,two);
+			div(one,two);
+			return false;
+		}
+
+		function add(x,y)
+		{
+			var result = document.getElementById("add");
+			result.innerHTML = x+y;
+		}
+		function sub(x,y)
+		{
+			var result = document.getElementById("sub");
+			result.innerHTML = x-y;
+		}
+		function mul(x,y)
+		{
+			var result = document.getElementById("mul");
+			result.innerHTML = x*y;
+		}
+		function div(x,y)
+		{
+			var result = document.getElementById("div");
+			result.innerHTML = x/y;
+		}
+	</script>
+</body>
+</html>

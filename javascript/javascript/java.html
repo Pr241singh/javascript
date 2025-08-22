@@ -1,0 +1,88 @@
+<!--Q1. Write a program to find user input is even or odd number?-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	document.write("STP COMPUTER EDUCATION");
+	console.log("Preeti Singh");
+	function stp()
+	{
+		window.alert("STP COMPUTER EDUCATION");
+	}
+	
+	function pre()
+	{
+		var x= document.getElementById('user').value;
+		x == "preeti" ? window.alert("User Found") : window.alert("User Not Found");
+	}
+	function odd()
+	{
+		var y= document.getElementById("use").value;
+		var result = y%2==0 ?" Is an Even no":" Is an Odd No";
+		document.getElementById("output").innerHTML = y+result;
+		return false;
+	}
+
+	function main()
+	{
+		var pic= document.getElementById("pic");
+		var btn= document.getElementById("bt");
+		var btn_txt= bt.innerHTML
+		pic.style.display = "none";
+		bt.innerHTML= "show";
+
+		if (btn_txt== "show") 
+		{
+			pic.style.display = "block";
+			btn.innerHTML = "Hide";
+		}
+
+		else
+		{
+
+		}
+	}
+</script>
+<!--br-->
+<!--button onclick="stp()">Click</button-->	
+<br>
+
+<button onmouseover="window.alert('STP COMPUTER EDUCATION')">Click Here</button>
+<br>
+<button onclick="window.close()">Click Here</button>
+<button onclick="window.open('preeti.jpg')">Click</button>
+<h1>STP COMPUTER EDUCATION</h1>
+<br>
+<button onclick="window.print()">Click Here</button><br>
+<form>
+	Username<br>
+	<input type="text" name="Username" id="user">
+	<input type="submit" value="check" onclick="pre()">
+</form>
+<h1>Odd & Even Number Finder</h1>
+<hr>
+<form>
+	Enter Number<br>
+	<input type="number" name="number" id="use" oninput="return odd()">
+</form>
+<p id="output"></p>
+
+<!--4 functions 
+	alert()
+	write()
+	log()
+	close()
+	open()
+-->
+<img src="ppt.jpeg" width="200px" height="200px" id="pic">
+<button id="bt" onclick="main()">Hide</button>
+</body>
+</html>

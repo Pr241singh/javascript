@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documnt</title>
+</head>
+<body>
+<h1 id="result"></h1>
+<input type="number" name="" step="any" id="data">kms
+<br>
+<button onclick="kms()">Convert</button>miles
+<h1 id="res"></h1>
+
+<script type="text/javascript">
+	/*var a = prompt("Please enter your first number");
+	var b = prompt("Please enter your second number");
+
+	var c = parseInt(a) + parseInt(b);
+	var result = document.getElementById('result');
+	result.innerHTML = c;*/
+	function kms() 
+	{
+		var data = document.getElementById("data").value;
+		var res = document.getElementById("res");	
+		const factor = 0.621371;
+		var miles = data*factor;
+		res.innerHTML = miles + 'miles';
+	}
+	
+
+	document.write(Math.sqrt(25));
+
+	var a = 10;
+	var b = 10;
+	var c = 10;
+	var s = (a+b+c)/2;
+	var temp = s*(s-a)*(s-b)*(s-c);
+	var area = Math.sqrt(temp);
+	window.alert(temp);
+
+	/*var a = prompt("Please enter the first value");
+	var b = prompt("Please enter the second value");
+	console.log("the value of a is: "+a+", the value of b is: "+b);
+	var temp;
+	temp = a;
+	a = b;
+	b = temp;
+	console.log("After swapping the value of a is: "+a+",After swapping the value of b is: "+b);*/
+
+	//for swapping a= a+b, b=a-b, a=a-b for ex
+
+	var a= 10;
+	var b = 2;
+	console.log("the value of a is: "+a+", the value of b is: "+b);
+	a = a+b;
+	b= a-b;
+	a= a-b;
+	console.log("After swapping the value of a is: "+a+",After swapping the value of b is: "+b)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Password Validation
+	</title>
+	<style type="text/css">
+
+		.col-1{
+			width: 8.33%;
+		}
+		.col-2{
+			width: 16.66%;
+		}
+		.col-3{
+			width: 25%;
+		}
+		.col-4{
+			width: 33.32%;
+		}
+		.col-5{
+			width: 41.66%;
+		}
+		.col-6{
+			width: 50%;
+		}
+		.col-7{
+			width: 58.33%;
+		}
+		.col-8{
+			width: 66.66%;
+		}
+		.col-9{
+			width: 75%;
+		}
+		.col-10{
+			width: 83.33%;
+		}
+		.col-11{
+			width: 91.66%;
+		}
+		.col-12{
+			width: 100%;
+		}
+
+		@charset "utf-8";
+
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		form{
+			width: 40%;
+			height: 350px;
+			box-shadow: 0px 5px 10px grey;
+			margin: 100px auto;
+			border-radius: 10px;
+			padding: 15px;
+			position: relative;
+
+		}
+
+		h1{
+			font-family: sans-serif;
+		}
+
+		p{
+			font-family: sans-serif;
+			color: rgba(0,0,0,0,6);
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+
+		hr{
+			border: none;
+			border-top: 0.5px solid #ccc; 
+		}
+
+		#firstname,#surname{
+			border: none;
+			border: 1px solid #ccc;
+			padding: 10px;
+			font-size: 15px;
+			border-radius: 5px;
+			width: 49%;
+			margin-top: 10px;
+			background-color: #FSF6F7;
+		}
+		#email,#password{
+			border: none;
+			border: 1px solid #ccc;
+			padding: 10px;
+			font-size: 15px;
+			border-radius: 5px;
+			width: 99%;
+			margin-top: 10px;
+			background-color: #FSF6F7;
+		}
+
+		#f_warning{
+			width: 25px;
+			position: absolute;
+			left: 43%;
+			top: 100px;
+			display: none;
+		}
+
+		#f_warn{
+			width: 25px;
+			position: absolute;
+			left: 89%;
+			top: 100px;
+			display: none;
+		}
+
+		#warn{
+			width: 25px;
+			position: absolute;
+			left: 89%;
+			top: 150px;
+			display: none;
+		}
+
+		#warning{
+			width: 25px;
+			position: absolute;
+			left: 89%;
+			top: 200px;
+			display: none;
+		}
+
+		#hint{
+			position: absolute;
+			top: 95px;
+			left: -115px;
+			display: none;
+		}
+
+		input:focus{
+			outline: none;
+		}
+
+		#password_hint{
+			width: 99%;
+			height: 80px;
+			border: 1px solid black;
+			padding: 10px;
+			display: none;
+			cursor: pointer;
+		}
+
+		#password_hint:hover{
+			background-color: #ddd;
+		}
+
+		#password{
+			margin-bottom: 10px;
+		}		
+
+		#eml{
+			position: absolute;
+			top: 143px;
+			left: -160px;
+			width: 200px;
+			height: 40px;
+			display: none;
+		}
+
+		#s_pass{
+			font-family: sans-serif;
+			font-size: 13px;
+			color: grey;
+		}
+
+		#submit{
+			width: 120px;
+			height: 40px;
+			margin-top: 20px;
+			float: right;
+			border: 1px solid #ccc;
+			cursor: pointer; 
+		}
+	</style>
+</head>
+<body>
+	<form id="frm">
+
+		<h1>Sign Up</h1>
+		<p>It's quick and easy</p>
+		<hr>
+		<input type="text" name="firstname" id="firstname" placeholder="Firstname">
+		<img src="warn.jpg" alt="warning" id="f_warning">
+		<img src="f_hint.png" alt="f_hint" id="hint">
+
+		<input type="text" name="surname" id="surname" placeholder="Surname">
+		<img src="warn.jpg" alt="warning" id="f_warn">
+
+		<input type="text" name="email" id="email" placeholder="Mobile No Or Email Address">
+		<img src="warn.jpg" alt="warning" id="warn">
+		<img src="email.png" alt="email" id="eml">
+
+		<input type="Password" name="password" id="password" placeholder="New Password">
+		<div id="password_hint">
+			<p>Use a Securely Generated Password</p>
+			<p id="pass">Dhj%7Fj4@</p>
+		</div>
+
+		<input type="checkbox" id="check" value="show-password"><span id="s_pass">Show Password</span>
+		<br>
+		<input type="submit" id="submit">
+	</form>
+
+	<script src="validation.js"></script>
+</body>
+</html>

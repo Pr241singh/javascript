@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window</title>
+	<noscript>
+		<h1>Please enable javascript in your browser</h1>
+		<style type="text/css">
+			#webpage{
+				display: none;
+			}
+
+			button{
+				position: fixed;
+				top: 0;
+				left: 0;
+				padding: 10px;
+			}
+		</style>
+	</noscript>
+</head>
+<body id="bd">
+	<div id="webpage">
+		<button onclick="demo()">Click</button>
+	</div>
+
+	<div id="web">
+		<h1>Welcome to our website</h1>
+	</div>
+
+	<h1 id="notice">No Internet</h1>
+
+	<button onclick="dem()">Scroll</button>
+	<img src="a.jpg">
+
+	<script type="text/javascript">
+		function demo()
+		{
+			var color = window.prompt("What is your name ?");
+			/*var bd = document.getElementById('bd');
+			bd.style.backgroundColor = color;*/
+			if(color.charAt(0).match("a"))
+			{
+				alert("match found");
+			}
+			else
+			{
+				alert("match not found");
+			}
+		}
+
+
+		setInterval(check,100);
+		function check()
+		{
+			if(navigator.onLine ==  true)
+			{
+				document.getElementById('web').style.display = "block";
+				document.getElementById('notice').style.display = "none";
+			}
+			else
+			{
+				document.getElementById('web').style.display = "none";
+				document.getElementById('notice').style.display = "block";
+			}
+		}
+
+		function dem()
+		{
+			window.scrollBy(-200,0);
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	<header>
+		<h1>STP Video Player</h1>
+	</header>
+	<section>
+		<video src="sanam.mp4" width="100%" height="410" id="vdo"></video>
+	</section>
+
+	<footer>
+		<button id="ubutton">
+			Upload 
+			<input type="file" accept=".mp4" id="vupload" onchange="upload()">
+		</button>
+		<button id="play" onclick="vplay()">Play</button>
+		<button id="pause" onclick="vpause()">Pause</button>
+		
+	</footer>
+
+	<script type="text/javascript">
+		 function vplay()
+		 {
+		 	var a = document.getElementById("vdo");
+		 	a.play();
+		 }
+		  function vpause()
+		 {
+		 	var a = document.getElementById("vdo");
+		 	a.pause();
+		 }
+		 function upload(){
+		 	var a = document.getElementById("vupload").value.replace(/.*(\/|\\)/, '');
+		 	var b = document.getElementById("vdo");
+		 	b.src=a;
+		 }
+
+		
+		 
+	</script>
+</body>
+</html>

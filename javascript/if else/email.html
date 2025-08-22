@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta content="viewport", name="width=device-width, initial-scale=1.0">
+	<title>Password</title>
+</head>
+<body>
+	<form id="fom">
+		Username<br>
+		<input type="text" id="user"><span id="u_name"></span>
+		<br>
+		<br>
+		Password<br>
+		<input type="Password" id="pass"><span id="p_name"></span>
+		<br>
+		<br>
+		<input type="submit" value="Login">
+	</form>
+	<br>
+	<h1>Vowel & Consonent Finder</h1>
+	<form id="frm">
+		<input type="text" id="box">
+		<br><br>
+		<input type="submit" value="check">
+	</form>
+	<script type="text/javascript">
+			var form = document.getElementById("fom");
+			var user = document.getElementById("user");
+			var pass = document.getElementById("pass");
+			var user_name = document.getElementById("u_name");
+			var user_pass = document.getElementById("p_name");
+			form.onsubmit = function() 
+			{
+
+				if (user.value == "" && pass.value == "")
+				{
+					user_name.innerHTML = "Empty Field";
+					user_pass.innerHTML = "Empty Field";
+					return false;
+				}
+
+				if (user.value == "")
+				{
+					user_name.innerHTML = "Empty Field";
+					return false;
+				}
+
+				if (pass.value == "")
+				{
+					user_pass.innerHTML = "Empty Field";
+					return false;
+				}
+
+				if (user.value != "preeti")
+				{
+					user_name.innerHTML = "User Not Found";
+					return false;
+				}
+				if (pass.value != "12345")
+				{
+					user_pass.innerHTML = "Wrong Password";
+					return false;
+				}
+				if (user.value == "preeti" && pass.value == "12345")
+				{
+					window.alert("Login Successful");
+				}
+			}
+
+			var input = document.getElementById("box");
+			var frm = document.getElementById("frm");
+			frm.onsubmit = function()
+			{
+				switch(input.value)
+				{
+					case 'a' : {window.alert("Vowel")};
+					break;
+					case 'e' : {window.alert("Vowel")};
+					break;
+					case 'i' : {window.alert("Vowel")};
+					break;
+					case 'o' : {window.alert("Vowel")};
+					break;
+					case 'u' : {window.alert("Vowel")};
+					break;
+					default : {window.alert("Consonent")};
+				}
+			}
+
+			/*
+			var input = document.getElementById("box");
+			var frm = document.getElementById("frm");
+
+			frm.onsubmit = function()
+			{
+				if (input.value == "a" )
+				{
+					window.alert("vowel");
+				}
+				else if (input.value == "e" )
+				{
+					window.alert("vowel");
+				}
+				else if (input.value == "i" )
+				{
+					window.alert("vowel");
+				}
+				else if (input.value == "o" )
+				{
+					window.alert("vowel");
+				}
+				else if (input.value == "u" )
+				{
+					window.alert("vowel");
+				}
+				else
+				{
+					window.alert("Consonent");
+				}
+			}
+			*/
+			/* switch syntax write down in your notebook
+			switch(condition variable)
+			{
+			case : {result};
+			break;
+			case : {result};
+			break;
+			default : {result};
+			};*/
+	</script>
+</body>
+</html>

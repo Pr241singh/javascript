@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Document
+	</title>
+	<script type="text/javascript">
+		function demo() 
+		{
+			var file = document.getElementById("file").value.replace(/.*(\/|\\)/, '');
+			var box = document.getElementById("show");
+			box.style.backgroundImage = "url("+file+")";
+		}
+		function right()
+		{
+			var first = document.getElementById("first").value.replace(/.*(\/|\\)/, '');
+			var sec = document.getElementById("second");
+			sec.style.backgroundImage = "url("+first+")";
+		}
+		function stp()
+		{
+			var a = document.getElementById("user").value;
+			var b = document.getElementById("result");
+			b.innerHTML = a; 
+			return false;
+		}
+		function login()
+		{
+			var use= document.getElementById("usr").value;
+			var pass= document.getElementById("pswd").value;
+			var check = use=="preeti" && pass==8586 ? "login success":"login failed";
+			document.getElementById("res").innerHTML = check;
+			return false;
+		}
+	</script>
+	<style type="text/css">
+		#show{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 50px auto;
+			background-size: cover;
+		}
+		#second{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			margin: 50px auto;
+			background-size: cover;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="show"></div>
+	<input type="file" accept="png" id="file" onchange="demo()">
+	<div id="second"></div>
+	<input type="file" accept="png" id="first" onchange="right()">
+	<br>
+	<form>
+	<input id="user">
+	<button onclick="return stp()">Update</button>
+	</form>
+
+	<div style="width: 500px;height: 200px;border: 4px solid red;">
+		<p id="result">  </p>
+	</div>
+	<form onsubmit="return login()">
+		Username<br>
+		<input type="text" name="username" id="usr"><br><br>
+		Password<br>
+		<input type="password" name="password" id="pswd"><br><br>
+		<input type="submit" value="login">
+	</form>
+	<h1 id="res"></h1>
+</body>
+</html>

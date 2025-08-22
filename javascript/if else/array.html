@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array</title>
+</head>
+<body>
+	<form id="frm">
+		Firstname
+		<input type="text" id="first">
+		<br><br>
+		Lastname
+		<input type="text" id="last">
+		<br><br>
+		<input type="submit">
+	</form>
+	<h1 id="result"></h1>
+
+<script type="text/javascript">
+	var student = {firstname : "Preeti", lastname : "Singh", mobile : 8586007689};
+	window.alert("my name is " + student.firstname+ " " + student.lastname+ " "+ student.mobile);
+
+	var form = document.getElementById("frm");
+	form.onsubmit = function()
+	{
+		var user = {
+		Firstname : document.getElementById("first").value,
+		Lastname : document.getElementById("last").value,
+		result : document.getElementById("result")};
+	user.result.innerHTML = user.Firstname+ " " + user.Lastname;
+	return false;
+	}
+
+	var stu = ['c','a','b','d'];
+	stu.sort().reverse();
+	window.alert(stu);
+</script>
+</body>
+</html>

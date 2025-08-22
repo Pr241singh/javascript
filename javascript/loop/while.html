@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop</title>
+</head>
+<body>
+	<form id="frm">
+		<input type="number" id="u_input">
+		<input type="submit">
+	</form>
+
+	<form id="natural">
+		<input type="number" id="nat">
+		<input type="submit">
+	</form>
+
+	<form id="even">
+		<input type="number" id="ev">
+		<input type="submit">
+	</form>
+	<p id="result"></p>
+
+	<form id="odd">
+		<input type="number" id="od">
+		<input type="submit">
+	</form>
+	<p id="reslt"></p>
+
+	<button id="btn">Click</button>
+
+	<button onclick="test()">Remove</button>
+
+	<p id="tme"></p>
+
+	<script type="text/javascript">
+		var i = 1;
+		while(i<10)
+		{
+			document.write("Hello World"+"<br>");
+			i++;
+		}
+
+		var n = 1
+		do{
+			document.write("Hello Preeti"+"<br>");
+			n++;
+		}
+		while(n<=10)
+
+			var form = document.getElementById('frm');
+			form.onsubmit = function()
+			{
+				var user = document.getElementById('u_input').value;
+				var m;
+				var total = 0;
+				for(m=1;m<=user;m++)
+				{
+					total = total+m;
+				} 
+				document.write(total);
+			}
+
+			/*var natural = document.getElementById("natural");
+			natural.onsubmit= function()
+			{
+				var nat = document.getElementById("nat").value;
+				var a;
+				for(a=1;a<=nat;a++)
+				{
+					document.write(a+"<br>");
+				}
+			}*/
+
+			var natural = document.getElementById("natural");
+			natural.onsubmit= function()
+			{
+				var nat = document.getElementById("nat").value;
+				var a;
+				for(a=1;a<=nat;a++)
+				{
+					document.write(nat-a+"<br>");
+				}
+			}
+
+			var even = document.getElementById("even");
+			even.onsubmit = function()
+			{
+				var ev = document.getElementById("ev").value;
+				var result = document.getElementById("result");
+				var b;
+				for(b=1;b<=ev;b++)
+				{
+					if(b%2 == 0)
+					{
+						result.innerHTML += b+"<br>"; 
+					}
+				}
+				return false
+			}
+
+
+			var odd = document.getElementById("odd");
+			odd.onsubmit = function()
+			{
+				var od = document.getElementById("od").value;
+				var reslt = document.getElementById("reslt");
+				var c;
+				for(c=1;c<=od;c++)
+				{
+					if(c%2 != 0)
+					{
+						result.innerHTML += c+"<br>"; 
+					}
+				}
+				return false
+			}
+
+			var k = 45.3
+			window.alert(parseInt(k));
+
+			var num = 1236;
+			var totl= 0;
+			var lastdigit = 0;
+			var t;
+			for(t=1;t<=4;t++)
+			{
+				lastdigit = num%10;
+				totl = totl+lastdigit;
+				num = parseInt(num/10);
+			}
+			window.alert(totl);
+
+			var button = document.getElementById("btn");
+			button.addEventListener("click",demo);
+
+			function demo()
+			{
+				window.alert("Hello Preeti");
+			}
+
+			function test()
+			{
+				button.removeEventListener("click",demo);
+			}
+
+			function dem()
+			{
+				var date = new Date();
+				var time = date.toLocaleTimeString();
+				var d = date.toLocaleDateString();
+				document.write(time);
+				document.write(d);
+			}
+			dem();
+	</script>
+</body>
+</html>

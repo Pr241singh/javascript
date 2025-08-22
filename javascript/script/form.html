@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Document
+	</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" />
+</head>
+<body>
+	<form>
+		Password<br>
+		<input type="text" name="password" id="pass" onclick="stp()" oninput="check()"><span id="msg"><i class=""></i></span><i id="loader" class="fas fa-spinner fa-spin " style="opacity: 0;"></i><i id="check" class="fas fa-check" style="opacity: 0"></i>
+	</form>
+	<script type="text/javascript">
+		function stp() 
+		{
+			var a = document.getElementById("msg");
+			a.innerHTML = "Enter 10 digits password ! ";
+		}
+		function check()
+		{
+			var a = document.getElementById("msg");
+			a.style.display = "none";
+			var b = document.getElementById("loader");
+			b.style.opacity = 1;
+			var c = document.getElementById("pass").value;
+			var len = c.length;
+			var check= document.getElementById("check");
+			len>10 ? check.style.opacity = 1 : b.style.opacity = 1;
+			len>10 ? b.style.opacity = 0 : check.style.opacity = 0;
+		}
+	</script>
+</body>
+</html>

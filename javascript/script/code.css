@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+.col-1{
+			width: 8.33%;
+		}
+		.col-2{
+			width: 16.66%;
+		}
+		.col-3{
+			width: 25%;
+		}
+		.col-4{
+			width: 33.32%;
+		}
+		.col-5{
+			width: 41.66%;
+		}
+		.col-6{
+			width: 50%;
+		}
+		.col-7{
+			width: 58.33%;
+		}
+		.col-8{
+			width: 66.66%;
+		}
+		.col-9{
+			width: 75%;
+		}
+		.col-10{
+			width: 83.33%;
+		}
+		.col-11{
+			width: 91.66%;
+		}
+		.col-12{
+			width: 100%;
+		}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	width: 100%;
+	height: auto;
+	background-color: blue;
+	padding: 15px;
+	color: white;
+	font-family: Dosis;
+	font-size: 30px;  
+}
+
+#code_box{
+	margin: 20px auto;
+	width: 90%;
+	height: 430px;
+}
+
+legend{
+	font-size: 30px;
+	font-family: sans-serif;
+	font-weight: bold; 
+}
+
+#code{
+	width: 100%;
+	height: 90%;
+	border: none;
+	padding: 20px;
+	font-size: 18px;
+	outline: none; 
+}
+
+#run-btn{
+	padding: 10px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+#result{
+	width: 100%;
+	height: 500px;
+	overflow: scroll;
+	padding: 15px;
+}
+
+#result_box{
+	display: none;
+	margin: 20px auto;
+	width: 90%;
+	height: 430px;
+}
+
+#icon{
+	display: none;
+	padding: 10px;
+	font-weight: bold;
+	margin: 10px;
+}

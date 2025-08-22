@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>	
+<style type="text/css">
+	img{
+		margin: 50px;
+	}
+</style>
+<body id="bdy" bgcolor="violet">
+	<!--<div id="box"></div>-->
+	<!--<h1 id="stp"></h1>-->
+	<h1 align="center" id="txt">STP COMPUTER EDUCATION</h1>
+	<center>
+	<button onclick="color()">Change color of this text</button>
+	<button onclick="font()">Change Font Style of this text</button>
+	</center>
+	<center>
+	<br>
+	<button id="btn" onclick="sreeti()">Preeti</button>
+	<button onclick="bg()">Click me to change background</button>
+
+	<form>
+		<input type="password" name="password" id="pwd">
+		<input type="checkbox" onclick="stp()">
+	</form>
+	</center>
+	<input id="user">
+	<button onclick="user()">Click Here</button>
+	<h1 align="center" id="demo">Preeti</h1>
+	<button onclick="demo()">Click</button>
+	<br>
+	<button onclick="int()">Click Me</button>
+	<input type="file" accept=".png" id="int">
+	<img src="mom's home.png" width="600px" height="400px"; id="image">
+	<img src="ppt.jpg" id="ppt">
+	
+	<script>
+		/*document.getElementById("stp").innerHTML = "STP Computer Education";
+		document.getElementById("stp").style.color = "blue";
+		document.getElementById("box").style.width = "720px";
+		document.getElementById("box").style.height = "480px";
+		document.getElementById("box").style.border = "3px solid red";*/
+		/*var a =document.getElementById("box");
+		a.style.width="500px";
+		a.style.height="500px";
+		a.style.background="blue";*/
+	var b = document.getElementById("txt");
+		function color()
+		{
+			b.style.color = "blue";
+		}
+
+		function font()
+		{
+			b.style.fontFamily = "sans-serif";
+		}
+
+		function sreeti()
+		{
+			var btn = document.getElementById("btn");
+			btn.innerHTML = "sreeti";
+			btn.style.backgroundColor = "violet";
+			btn.style.color = "red";
+		}
+		function bg()
+		{
+			var body = document.getElementById("bdy");
+			body.bgColor = "pink";
+		}
+		function stp()
+		{
+			var a = document.getElementById("pwd");
+			a.type="text";
+		}
+		function user()
+		{
+			var d = document.getElementById("user").value;
+			window.alert(d);
+		}
+		function demo()
+		{
+			var x = document.getElementById("demo").align;
+			window.alert(x);
+		}
+		function int()
+		{
+			var y = document.getElementById("int").value.replace(/.*(\/|\\)/, '');
+			window.alert(y);
+		}
+
+		function image()
+		{
+			var p = document.getElementById("ppt").value.replace(/.*(\/|\\)/, '');
+			var b = document.getElementById("image");
+		 	b.src=p;
+		}
+
+		console.dir(document.head);
+		
+	</script>
+</body>
+</html>

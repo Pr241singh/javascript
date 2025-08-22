@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this keyword</title>
+</head>
+<body>
+	<button id="btn">What is my name?</button>
+
+	<script type="text/javascript">
+		var btnn = document.getElementById('btn');
+		btnn.onclick = function()
+		{
+			this.innerHTML = "Preeti Singh";
+		}
+
+		document.onkeydown = function(a)
+		{
+			if(a.ctrlkey && a.keyCode==65)
+			{
+				alert("view source not allowed")
+				return false;
+			}
+		}
+
+		document.onkeydown(b)
+		{
+			if(b.keyword && b.shiftKey && b.keyCode==66)
+			{
+				alert("view source not allowed")
+				return false;
+			}
+		}
+
+		document.cookie = "name = Preeti;expires = Mon,26 May 2025 12:00:00 UTC";
+		alert(document.cookie);
+
+		var a = document.cookie.split("=");
+		alert(a[1]);
+	</script>
+</body>
+</html>

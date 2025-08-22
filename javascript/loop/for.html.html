@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop</title>
+</head>
+<body>
+	<form id="frm">
+		<input type="text" id="text"  placeholder="Type Your Text">
+		<input type="number" id="repeat" placeholder="No of repeatation">
+		<input type="submit" value="Repeat">
+	</form>
+
+	<p id="result"></p>
+
+	<form id="table">
+		<input type="number" placeholder="Enter Table No" id="u-tab">
+		<input type="submit">
+	</form>
+
+	<form id="even">
+		<input type="text" placeholder="Enter Your Number" id="no">
+		<input type="submit">
+	</form>
+	<p id="res"></p>
+
+	<script type="text/javascript">
+		var a;
+		for(a=1;a<10;a++)
+		{
+			document.write("preeti<br>");
+		}
+
+		var form = document.getElementById('frm');
+
+		form.onsubmit = function()
+		{
+			var text = document.getElementById('text').value;
+			var num = document.getElementById('repeat').value;
+			var i;
+			for(i=1;i<num;i++)
+			{
+				document.write(text+"<br>");
+			}
+		}
+
+		var p;
+		var b = document.getElementById('result');
+		for(p=1;p<=10;p++)
+		{
+			b.innerHTML += "Hello World <br>";
+			b.innerHTML +=  p+"<br>";
+		}
+
+		var table = document.getElementById('table');
+		table.onsubmit = function()
+		{
+			var u_tab = document.getElementById('u-tab').value;
+			var s;
+			for(s=1;s<=10;s++)
+			{
+				document.write(u_tab*s+"<br>");
+			}
+		}
+
+		var book = ["Hindi","English","Maths","Science"];
+		var m;
+		for(m=0;m<4;m++)
+		{
+			document.write(book[m]+"<br>");
+		}
+
+		var even = document.getElementById('even');
+		even.onsubmit = function()
+		{
+			var no = document.getElementById('no').value;
+			var res = document.getElementById('res');
+			var n;
+			for(n=1;n<=no;n++)
+			{
+				if(n%2 == 0)
+				{
+					res.innerHTML += n+"<br>";
+				}
+			}
+			return false;
+		}
+
+
+	</script>
+</body>
+</html>

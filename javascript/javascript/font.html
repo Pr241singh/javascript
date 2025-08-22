@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta content="viewport", name="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		#range{
+			position: fixed;
+			bottom: 0;
+			left: 54%;
+		}
+		#fixed-box{
+			width: 250px;
+			height: 80px;
+			background-color: red;
+			position: fixed;
+			bottom: 0;
+			left: 50%;
+		}
+		#showtext{
+			text-align: center;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		img{
+			filter: brightness(200%);
+		}
+		
+		#box{
+			width: 600px;
+			height: 430px;
+			border: 2px solid blue; 
+		}
+		#pic{
+			width: 600px;
+			height: 350px;
+			background-size: cover;
+		}
+		#tool{
+			width: 190px;
+			height: 50px;
+			border: 2px solid red;
+			display: inline-flex;
+			margin-top: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function demo() 
+		{
+			var x = document.getElementById('range').value;
+			var y = document.getElementById('result');
+			y.style.fontSize = x+"px";
+			var z = document.getElementById('showtext');
+			z.innerHTML = "Your Font Size Is Now= "+x+" px";
+		}
+
+		function bright()
+	{
+		var x = document.getElementById("bright").value;
+		var pic = document.getElementById("pic");
+		pic.style.filter = "brightness("+x+"%)"
+	}
+
+	function contrast()
+	{
+		var x = document.getElementById("contrast").value;
+		var pic = document.getElementById("pic");
+		pic.style.filter = "contrast("+x+"%)"
+	}
+	function saturate()
+	{
+		var x = document.getElementById("saturate").value;
+		var pic = document.getElementById("pic");
+		pic.style.filter = "saturate("+x+"%)"
+	}
+	</script>
+</head>
+<body>
+<h1 id="result">STP Computer Education</h1>
+<div id="fixed-box">
+	<p id="showtext"></p>
+	<input id="range" type="range" min="0" max="1000" oninput="demo()">
+</div>
+<div id="box">
+	<img src="background.jpg" id="pic";>
+	<div id="tool">
+		<p>Brightness</p>
+		<input type="range" id="bright" min="0" max="200" oninput="bright()">
+	</div>
+
+	<div id="tool">
+		<p>Contrast</p>
+		<input type="range" id="contrast" min="0" max="400" oninput="contrast()">
+	</div>
+
+	<div id="tool">
+		<p>Saturate</p>
+		<input type="range" id="saturate" min="0" max="500" oninput="saturate()">
+	</div>
+</div>
+
+</body>
+</html>

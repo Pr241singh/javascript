@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en-US">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Condition
+	</title>
+</head>
+<body>
+	<h1 align="center">Odd & Even No Finder</h1>
+	<hr>
+	<br>
+	<form>
+		<input type="number" id="num">
+		<button onclick="stp()">Check</button>
+	</form>
+	<br>
+	<h1 id="pre">Preeti Singh</h1>
+	<button id="in">Zoom In</button>
+	<button id="out">Zoom Out</button>
+	<button id="rest" onclick="reset()">Reset</button>
+	<script type="text/javascript">
+		function stp()
+		{
+			var a = document.getElementById("num").value;
+			if (a%2 == 0) 
+			{
+				window.alert("This ia an even no.");
+			}
+			else
+			{
+				window.alert("This ia  not an even no.");
+			}
+		}
+
+		var z_in = document.getElementById("in");
+		var text = document.getElementById("pre");
+		z_in.onclick = function first()
+		{
+			text.style.fontSize = "40px";
+			z_in.onclick = function sec()
+		{
+			text.style.fontSize = "50px";
+			z_in.onclick = function three()
+		{
+			text.style.fontSize = "60px";	
+		}
+		}
+		}
+
+		var z_out = document.getElementById("out");
+		var text = document.getElementById("pre");
+		z_out.onclick = function first1()
+		{
+			text.style.fontSize = "50px";
+			z_out.onclick = function sec2()
+		{
+			text.style.fontSize = "40px";
+			z_out.onclick = function three3()
+		{
+			text.style.fontSize = "30px";	
+		}
+		}
+		}
+
+		function reset()
+		{
+			var d=document.getElementById("pre").value;
+			var c=document.getElementById("rest");
+			c = d;
+			c.style.fontSize = "40px";
+		}
+	</script>
+</body>
+</html>
